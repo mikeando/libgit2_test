@@ -1,7 +1,5 @@
 #include "git2.h"
 #include <iostream>
-int config_callback( const git_config_entry* entry, void* userdata);
-int push_status_callback(const char *ref, const char *msg, void *data);
 
 int config_callback( const git_config_entry* entry, void* /* userdata */ ) {
   std::cout<< entry->name <<" : "<<entry->value<<" : "<<entry->level<<std::endl;
